@@ -1,0 +1,17 @@
+<script>
+  let arr = [33, 11, 532, 135, 11];
+
+  let len = arr.length;
+  for (let i = 0; i < len; i++) {
+
+    for (let j = i+1; j<len; j++) {
+        console.log('sorted',arr)
+      if (arr[j] < arr[i]) {
+        let tem = arr[j];
+        arr[j] = arr[i];
+        arr[i] = tem;
+      }
+    }
+  }
+  console.log(arr);
+</script>

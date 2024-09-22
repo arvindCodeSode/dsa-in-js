@@ -1,0 +1,61 @@
+<script>
+    /*Make a logic where sort the array, 
+    fbut do not sort 2 element from an array and place these two element at the end the array for exmaple 65, 23 */
+    let arr = [13,54,22,14,65,23,42,11];
+  
+    //           [13,54,22,14,23,42,11, undefined]
+    //           [13,54,22,14,42,11,undefined, undefined]
+    let excude = [65,54];
+    //define the position. it will help , when we replace find item. 
+    let pos=-1;
+
+    for(m=0;m<excude.length;m++)
+    {
+        for(k=0;k<arr.length;k++)
+        {
+            if(arr[k]==excude[m])
+            {
+                arr[k]=arr[k+1];   
+                pos = k;
+            }
+            // console.log('helo',k,pos);
+            if(pos != -1 && k>=pos)
+            {       
+                arr[k]=arr[k+1];  
+                pos = k;
+            }
+        }
+    }
+    arr.length=arr.length-excude.length;
+
+    // bubbleSort(arr);
+    let len = arr.length;
+    function selectSort(arr)
+    {
+        for(let i=0;i<arr.length;i++)
+        {
+            let midEle = i;
+            for(let j=i+1;j<arr.length;j++)
+            {
+                if(arr[j]<arr[midEle])
+                {
+                    midEle=j;
+                }
+                
+            }
+            let temp = arr[midEle];
+            arr[midEle]=arr[i];
+            arr[i]=temp;
+
+        }
+    }
+    selectSort(arr);
+    for(let j =0; j<excude.length;j++)
+    {
+        console.log(len+j);
+        arr[len+j]=excude[j];
+    }
+    console.log(arr);
+
+
+</script>

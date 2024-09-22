@@ -1,0 +1,21 @@
+<script>
+    function apple(a){
+       
+        if( a >= 0 )
+        {
+            console.log('Total apple purchased ',a*2);
+            a = a-10;
+            buyMore( a );
+            
+        }
+    }
+    function buyMore( b ){
+        if( b >=0 )
+        {
+            console.log('Total Money ',b);
+            apple( b );
+        }
+    }
+    buyMore(100);
+
+</script>

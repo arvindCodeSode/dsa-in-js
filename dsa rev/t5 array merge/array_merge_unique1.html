@@ -1,0 +1,37 @@
+<script>
+    let arr = [33,225,66,23,12,225];
+    let arr1 = [ 35,11,36,33];
+    let arr3=[];
+    let len = arr.length;
+    for (let index = 0; index < arr1.length; index++) {
+        let isDuplicate=false;
+            for(let j=0;j<arr3.length;j++)
+            {
+                if(arr[index]==arr3[j])
+                {
+                    isDuplicate=true;
+                    break;
+                }
+            }
+        if(isDuplicate===false)
+        {
+            arr3.push(arr[index]);
+        }
+    }
+    for (let index = 0; index < arr1.length; index++) {
+        let isDuplicate=false;
+            for(let j=0;j<arr3.length;j++)
+            {
+                if(arr1[index]==arr3[j])
+                {
+                    isDuplicate=true;
+                    break;
+                }
+            }
+        if(isDuplicate===false)
+        {
+            arr3.push(arr1[index]);
+        }
+    }
+    console.log(arr3);
+</script>

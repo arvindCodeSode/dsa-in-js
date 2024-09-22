@@ -1,0 +1,42 @@
+<script>
+
+    let arr = [];
+    let currentSize = arr.length;
+    let max = 5;
+
+    function push(newVal){
+       
+        if(currentSize>=max){
+            alert('You cannot add '+newVal+' Becuase stack is full');
+        }else{
+            arr[currentSize]=newVal;
+            currentSize+=1;
+        }
+        // console.log(arr);
+    }
+    function pop(){
+        if(currentSize<=0){
+            alert('Stack is empty')
+        }else{
+            currentSize-=1;
+
+            arr.length=currentSize;
+        }
+      
+    }
+   
+    push(20);
+    push(21);
+    push(2);
+    push(23);
+    push(19);
+    // push(24);
+    pop()
+    pop()
+    pop()
+    push(19);
+    pop()
+    // pop()
+    // pop()
+    console.log(arr);
+</script>

@@ -1,0 +1,41 @@
+<script>
+    let ar = [3,44,22,52,44,11];
+    let ar1 = [4,22,45,22];
+    let ar2=[];
+    let dupli_pos;
+    for(let i=0; i<ar.length;i++)
+    {
+        let isDuplicate = false;
+        for( let k=0; k < ar2.length; k++ )
+        {
+            if( ar[i] == ar[k] )
+            {
+                isDuplicate=true;
+                break;
+            }
+
+        }
+        if(!isDuplicate)
+        {
+            ar2.push(ar[i]);
+        }
+    }
+    for(let j=0; j<ar1.length;j++)
+    {
+        let isDuplicate = false;
+        for( let k=0; k < ar2.length; k++ )
+        {
+            if( ar1[j] == ar[k] )
+            {
+                isDuplicate=true;
+                break;
+            }
+
+        }
+        if(!isDuplicate)
+        {
+            ar2.push(ar1[j]);
+        }
+    }
+    console.log(ar2);
+</script>

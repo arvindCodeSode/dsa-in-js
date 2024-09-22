@@ -1,0 +1,26 @@
+<script>
+    let arr = [20,2,55,24,5];
+    let len =arr.length;
+    console.log(arr.length);
+    let pos =3;
+    let ele= 33;
+    for( let i=len-1 ; i > 0; i-- )
+    {
+        if(i >= pos)
+        {
+            console.log(i,);
+
+            arr[i+1]=arr[i];
+            if(i==pos)
+            {
+                arr[i]=ele;
+            }else{
+                // arr[i+1]=arr[i];
+            }
+
+        }
+
+    }
+    
+    document.write(`${arr} <br />`);
+</script>

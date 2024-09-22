@@ -1,0 +1,40 @@
+<script>
+    let arr = [22,11,33,13,353];
+
+    for(let i=0; i<arr.length; i++)
+    {
+        for(let j=0; j<arr.length;j++)
+        {
+            if( arr[j] > arr[j+1] )
+            {
+                let temp = arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    // console.log(arr);
+    function bubbleSort(arr)
+    {
+        let len = arr.length;
+        let swapped = false;
+        do{
+            swapped=false;
+            for(let i = 0 ; i< len;i++)
+            {
+                console.log('sorted',arr);
+                if( arr[i] > arr[i+1] )
+                {
+                    let temp = arr[i];
+                    arr[i]=arr[i+1];
+                    arr[i+1]=temp;
+                    swapped=true;
+                }
+            }
+            len--;
+        }
+        while(swapped);
+        return arr;
+    }
+    console.log(bubbleSort([1,44,22,12,55]));
+</script>

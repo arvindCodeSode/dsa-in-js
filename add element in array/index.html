@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+
+            //Insert Element into an array
+            let arr = [30,4,3,44,22,34,62];
+
+            let insertElement = 15;
+            let len = arr.length;
+            let pos = 5;
+            arr[len]=undefined;
+
+            let newar=[];
+            for(let i = 0; i < arr.length; i++){
+                if(i<pos){
+                    newar[i]=arr[i];
+                }else{
+                    if(i==pos){
+                        newar[i]=insertElement;
+                    }else{
+                        // console.log(arr,i+1);
+                        newar[i]=arr[i-1];
+                    }
+                }
+            }
+            console.log(newar);
+        </script>
+    </body>
+</html>

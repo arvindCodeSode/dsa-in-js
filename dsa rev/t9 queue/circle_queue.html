@@ -1,0 +1,56 @@
+<script>
+
+    class Queue{
+        constructor(size){
+            this.max = size;
+            this.arr = new Array(size);
+            this.currenSize =0; 
+            this.front = -1;
+            this.rear = -1;
+        }
+        enqueue(val){
+            if(this.currenSize != this.max)
+            {
+                if(this.rear == this.max-1)
+                {
+                    this.rear =0;
+                }else{
+                    this.rear++;
+                }
+                this.arr[this.rear]=val;
+                this.currenSize++;
+                if(this.front == -1)
+                {
+                    this.front=this.rear;
+                }
+            }
+            //[10,10,40,20,40]
+
+        }
+        dequeue()
+        {
+            if(this.currenSize !=0)
+            {
+                this.arr[this.front]=null;
+                if(this.front == this.max-1)
+                {
+                    this.front=0;
+                }else{
+                    this.front++;
+                }
+                this.currenSize--
+                
+            }else{
+                this.front=-1;
+                this.rear=-1;
+                alert('queue is empty')
+            }
+
+        }
+        display()
+        {
+            console.log(this.arr);
+        }
+    }
+    let queue = new Queue(5);
+</script>

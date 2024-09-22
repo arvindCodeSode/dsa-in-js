@@ -1,0 +1,29 @@
+<script>
+ function anagraString(str1,str2)
+ {
+    if(str1.length != str2.length)
+ {
+    return false;
+ }
+ let objectStr = {};
+ for(ch of str1)
+ {
+    // console.log(ch);
+    objectStr[ch]=(objectStr[ch] || 0)+1;
+ }
+ for(ch1 of str2)
+ {
+     if( !objectStr[ch1] )
+     {
+        console.log(objectStr,'a',ch1);
+        return false;
+    }
+    objectStr[ch1]--
+    console.log(objectStr,'d');
+
+ }
+ return true;
+
+ }
+ console.log(anagraString('hello','elooh'));
+</script>

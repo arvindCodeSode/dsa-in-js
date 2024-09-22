@@ -1,0 +1,30 @@
+<script>
+    let str = 'hello';
+    str = str.split('');
+    let data =[];
+    let len = data.length;
+    function reverse_string_stack(item){
+        
+        for(let i =0; i<item.length;i++){
+            push(item[i]);
+        }
+        for(let j =0; j<item.length;j++){
+            item[j]=pop();
+        }
+    }
+    function push(val){
+        // console.log(val);
+        data[len]=val;
+        len+=1;
+    }
+    function pop(){
+        let removedItem = data[len-1];
+        len -=1;
+        data.length=len
+        return removedItem;
+    }
+    // console.log(str);
+    reverse_string_stack(str);
+    console.log(str);
+    
+</script>

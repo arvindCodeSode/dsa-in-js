@@ -1,0 +1,23 @@
+<script>
+    let arr =[2,22,23,32,45,75,78];
+    let find = 45;
+    let pos = undefined;
+    let start = 0;
+    let end = arr.length-1;
+    while(start<=end)
+    {
+        let mid = Math.floor((start+end)/2);
+        if(arr[mid]==find)
+        {
+            pos=mid;
+            break;
+        }
+        else if(arr[mid]<find)
+        {
+            start=mid+1;
+        }else{
+            end=mid-1;
+        }
+    }
+    console.log(pos);
+</script>

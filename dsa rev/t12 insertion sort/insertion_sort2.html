@@ -1,0 +1,19 @@
+<script>
+  let arr = [33, 11, 532, 135, 11];
+  let len = arr.length;
+  let i,j,current;
+  for (let i = 1; i < len; i++) {
+    let current = arr[i];
+    j = i-1;
+    console.log(j,'above')
+    while(j>=0 && arr[j]>current)
+    {
+        console.log(j,'insdie')
+        arr[j+1]=arr[j];
+        j--;
+    }
+    console.log(j,'below',current)
+    arr[j+1]=current;
+  }
+  console.log(arr);
+</script>

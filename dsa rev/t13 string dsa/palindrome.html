@@ -1,0 +1,24 @@
+<script>
+    let str = 'abcba';
+    let tr = false;
+    let mid = Math.floor(str.length/2);
+    console.log(mid);
+    for(let i =0;i <str.length;i++)
+    {
+        let last = (str.length-1)-i;
+
+        console.log(str[i]+'=='+str[last])
+        if(str[i]==str[last])
+        {
+            tr = true;
+        }else{
+            tr=false;
+            break;
+        }
+        if(i==mid-1)
+        {
+            break;
+        }
+    }
+    console.log(tr);
+</script>

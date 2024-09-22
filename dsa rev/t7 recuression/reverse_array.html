@@ -1,0 +1,16 @@
+<script>
+    let arr = [2,5,22,43,13];
+
+    function reverse(arr,start,end){
+        console.log(arr);
+        if(start<=end){
+            let temp = arr[start];
+            arr[start]=arr[end]
+            arr[end]=temp;
+            reverse(arr,start+1,end-1)
+        }
+
+
+    }
+    reverse(arr,0,arr.length-1)
+</script>
